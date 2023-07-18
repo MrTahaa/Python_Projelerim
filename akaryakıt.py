@@ -1,5 +1,6 @@
 #Kullanıcıdan aldığı şehir bilgisi ve görmek istediği  benzin,lpg ve dizel bilgisini alan
 #buna bağlı olarak internetten çektiği bilgileri gösteren bir program yazınız
+#Kullandığım apiyi "https://collectapi.com/tr/" burda bulabilirsiniz
 import http.client
 import json
 liste_benzin = []
@@ -10,7 +11,7 @@ def Benzin(city):
 
     headers = {
         'content-type': "application/json",
-        'authorization': "apikey 0MeJYeRX9OBEjk71cQDHk7:52DK1wAOBdV00slYB3Ko76"
+        'authorization': "apikey "
         }
 
     conn.request("GET", "/gasPrice/turkeyGasoline?district=kadikoy&city="+city, headers=headers)
